@@ -1,0 +1,22 @@
+{
+  "name": "r-place",
+  "version": "1.0.0",
+  "description": "cloning r-place using gunjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amalzybu/r-place-clone.git"
+  },
+  "author": "amal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Amalzybu/r-place-clone/issues"
+  },
+  "homepage": "https://github.com/Amalzybu/r-place-clone#readme",
+  "dependencies": {
+    "gun": "^0.2020.1238"
+  }
+}
