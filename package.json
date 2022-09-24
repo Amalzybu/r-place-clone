@@ -2,9 +2,10 @@
   "name": "r-place",
   "version": "1.0.0",
   "description": "cloning r-place using gunjs",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "node index.js"
+    "test": "node server.js",
+    "dev": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,13 @@
   },
   "homepage": "https://github.com/Amalzybu/r-place-clone#readme",
   "dependencies": {
-    "gun": "^0.2020.1238"
+    "copy-webpack-plugin": "^11.0.0",
+    "gun": "^0.2020.1238",
+    "html-webpack-plugin": "^5.5.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
   }
 }
