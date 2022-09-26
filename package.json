@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "node server.js",
-    "dev": "node server.js"
+    "dev": "concurrently npm:watch:*",
+    "watch:wpck": "npx webpack-dev-server",
+    "watch:svr": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -18,9 +20,11 @@
   },
   "homepage": "https://github.com/Amalzybu/r-place-clone#readme",
   "dependencies": {
+    "concurrently": "^7.4.0",
     "copy-webpack-plugin": "^11.0.0",
     "gun": "^0.2020.1238",
-    "html-webpack-plugin": "^5.5.0"
+    "html-webpack-plugin": "^5.5.0",
+    "three": "^0.144.0"
   },
   "devDependencies": {
     "webpack": "^5.74.0",
