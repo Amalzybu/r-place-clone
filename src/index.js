@@ -1,8 +1,10 @@
 
 gun = Gun(['http://localhost:8765/gun', 'https://gun-manhattan.herokuapp.com/gun']);
-copy = gun.get('test').get('paste');
-paste.oninput = () => { copy.put(paste.value) };
-copy.on((data) => { paste.value = data });
+let even = "white";
+let odd = "gray";
+copy = gun.get('test').get('head');
+head.oninput = () => { copy.put(head.value) };
+copy.on((data) => { even = data });
 
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(60, innerWidth / innerHeight, 1, 1000);
@@ -44,7 +46,7 @@ function drawRectangle(index, width, height, color) {
 for (let index = 0; index < 121; index++) {
 
   if(index%2===0){
-    drawRectangle(index, 1, 1, "white");
+    drawRectangle(index, 1, 1, even);
   }
   else{
     drawRectangle(index, 1, 1, "gray");
@@ -52,14 +54,20 @@ for (let index = 0; index < 121; index++) {
   }
 }
 
-
 var plane = new THREE.Mesh(new THREE.PlaneBufferGeometry(11, 11), new THREE.MeshBasicMaterial({
   color: "white",
   map: map
 }));
 scene.add(plane);
 
+
+
 renderer.setAnimationLoop(() => {
+
+
   renderer.render(scene, camera);
 });
+
+
+
 
